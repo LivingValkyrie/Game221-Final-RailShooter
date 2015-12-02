@@ -18,11 +18,11 @@ public class ScriptLookAtTarget : MonoBehaviour {
 
     Quaternion startRotation;
     
-	void Update(){
-		if (Input.GetButtonDown ("Jump")) {
-			Activate(rotateSpeed, targets, lockTime);
-		}
-	}
+	//void Update(){
+	//	if (Input.GetButtonDown ("Jump")) {
+	//		Activate(rotateSpeed, targets, lockTime);
+	//	}
+	//}
 
     public void Activate(float[] pRotateSpeed, GameObject[] pTargets, float[]pLockTimes)
     {
@@ -54,6 +54,7 @@ public class ScriptLookAtTarget : MonoBehaviour {
 
     // Free Look code gotten from Project 2
     // Author: Nathan Boehning
+    //modified by matt gipson
     IEnumerator FreeLook( float facingTime ) {
         float elapsedTime = 0f; // keeps track of elapsed time to continue facing
         float xRotation = 0f;
@@ -66,17 +67,17 @@ public class ScriptLookAtTarget : MonoBehaviour {
         float yRotationV = 0;
 
         // Make cursor invisible and locked in the middle of the screen
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
 
         while ( elapsedTime < facingTime ) // iterate through the loop for faceSeconds seconds
         {
 
             // Increment the yRotation using mouse input mulitplied by the mouse sensitivity
-            yRotation += Input.GetAxis( "Mouse X" ) * lookSensitivity;
+            yRotation += Input.GetAxis( "Horizontal" ) * lookSensitivity;
 
             // Decrement the xRotation using mouse input. (incrementing creates an inverted effect)
-            xRotation -= Input.GetAxis( "Mouse Y" ) * lookSensitivity;
+            xRotation -= Input.GetAxis( "Vertical" ) * lookSensitivity;
 
             // Lock the rotation so camera can only look straight up or straight down without going circular
             xRotation = Mathf.Clamp( xRotation, -90, 90 );
