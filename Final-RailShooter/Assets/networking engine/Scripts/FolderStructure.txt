@@ -1,0 +1,5 @@
+This folder is where all scripts (except gizmo, plugins, extensions, and shaders) are stored.
+Scripts workflow:
+	Common: This is where you place scripts that are common across multiple objects or scenes.
+
+New folders should be created for types of objects or scenes, for example Weapons, Characters, Characters/Birds, StartMenu, ect.
