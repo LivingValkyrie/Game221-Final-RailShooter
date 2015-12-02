@@ -195,6 +195,10 @@ public class ScriptEngine : MonoBehaviour {
                     break;
                 case FacingTypes.FREELOOK:
 
+                    cameraLookAtScript.StartCoroutine( "FreeLook", facing.facingTime );
+
+                    yield return new WaitForSeconds( facing.facingTime );
+
                     break;
                 default:
                     ScriptErrorLogging.logError("Invalid movement type!");

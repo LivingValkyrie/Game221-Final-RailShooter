@@ -30,7 +30,7 @@ public class EngineEditor :  Editor
 //		SerializedProperty facingsArray = serializedObject.FindProperty ("facings");
 
         //added by gipson to figure things out
-	     DrawDefaultInspector();
+	   //DrawDefaultInspector();
 
         if(GUILayout.Button("Editor"))
         {
