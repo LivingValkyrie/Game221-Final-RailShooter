@@ -30,7 +30,7 @@ public class ExportWaypoints {
         if (Selection.activeObject is GameObject) {
             //Debug.Log("is game object");
             GameObject go = (GameObject) Selection.activeObject;
-            if (go.GetComponent<ScriptEngine>() != null) {
+            if (go.GetComponent<ScriptRailEngine>() != null) {
                 //Debug.Log("has engine component");
                 
                 ExportLists(go, author, level, Application.dataPath);
@@ -44,11 +44,11 @@ public class ExportWaypoints {
 
     static void ExportLists(GameObject go, string author, string level, string path ) {
         //get script
-        ScriptEngine engine = go.GetComponent<ScriptEngine>();
+        ScriptRailEngine railEngine = go.GetComponent<ScriptRailEngine>();
 
         List<string> waypoints = new List<string>();
 
-        foreach (ScriptMovements node in engine.movements) {
+        foreach (ScriptMovements node in railEngine.movements) {
             string nodeString = "M_";
 
             //type
@@ -87,7 +87,7 @@ public class ExportWaypoints {
             waypoints.Add(nodeString);
         }
 
-        foreach (ScriptFacings node in engine.facings) {
+        foreach (ScriptFacings node in railEngine.facings) {
             string nodeString = "F_";
 
             //Facings are FREELOOK, WAIT, LOOKAT, and LOOKCHAIN
@@ -139,7 +139,7 @@ public class ExportWaypoints {
             waypoints.Add(nodeString);
         }
 
-        foreach (ScriptEffects node in engine.effects) {
+        foreach (ScriptEffects node in railEngine.effects) {
             string nodeString = "E_";
 
             //Effects are SHAKE, SPLATTER, WAIT, and FADE

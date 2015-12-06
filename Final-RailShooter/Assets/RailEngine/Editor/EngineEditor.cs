@@ -6,15 +6,15 @@ using UnityEditor;
  * @author Mike Dobson
  * */
 
-[CustomEditor(typeof(ScriptEngine))]
+[CustomEditor(typeof(ScriptRailEngine))]
 public class EngineEditor :  Editor
 {
 	
-	ScriptEngine engineScript;
+	ScriptRailEngine railEngineScriptRail;
 
 	void Awake()
 	{
-		//engineScript = (ScriptEngine)engineScript;
+		//railEngineScriptRail = (ScriptRailEngine)railEngineScriptRail;
 	}
 
 	public override void OnInspectorGUI()

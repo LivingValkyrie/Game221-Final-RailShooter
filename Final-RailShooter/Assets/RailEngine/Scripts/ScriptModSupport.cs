@@ -12,7 +12,7 @@ public class ScriptModSupport : MonoBehaviour
     public GameObject movementWaypoint;
     public GameObject facingWaypoint;
     public GameObject effectWaypoint;
-    public ScriptEngine player;
+    public ScriptRailEngine player;
 
 
     string defaultModFileText = "Edit this file for modding timelines and delete this line";
@@ -24,7 +24,7 @@ public class ScriptModSupport : MonoBehaviour
     {
         if (player == null)
         {
-            player = GameObject.FindGameObjectWithTag("Player").GetComponent<ScriptEngine>();
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<ScriptRailEngine>();
             if (player == null)
             {
                 ScriptErrorLogging.logError("No Player Object found, please add a player to the scene and check the tag.");

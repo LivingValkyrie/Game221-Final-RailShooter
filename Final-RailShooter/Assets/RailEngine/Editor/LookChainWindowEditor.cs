@@ -13,7 +13,7 @@ public class LookChainWindowEditor : EditorWindow {
     float[] rotationSpeed;
     GameObject[] targets;
 
-    ScriptEngine engine;
+    ScriptRailEngine railEngine;
 
     static int facingFocus = 0;
 
@@ -28,10 +28,10 @@ public class LookChainWindowEditor : EditorWindow {
 
     void OnFocus()
     {
-        engine = GameObject.FindWithTag("Player").GetComponent<ScriptEngine>();
-        lockTimes = engine.facings[facingFocus].lockTimes;
-        rotationSpeed = engine.facings[facingFocus].rotationSpeed;
-        targets = engine.facings[facingFocus].targets;
+        railEngine = GameObject.FindWithTag("Player").GetComponent<ScriptRailEngine>();
+        lockTimes = railEngine.facings[facingFocus].lockTimes;
+        rotationSpeed = railEngine.facings[facingFocus].rotationSpeed;
+        targets = railEngine.facings[facingFocus].targets;
     }
 
     //on the editor Window
@@ -94,8 +94,8 @@ public class LookChainWindowEditor : EditorWindow {
 
     void OnLostFocus()
     {
-		engine.facings [facingFocus].lockTimes = lockTimes;
-		engine.facings [facingFocus].rotationSpeed = rotationSpeed;
-		engine.facings [facingFocus].targets = targets;
+		railEngine.facings [facingFocus].lockTimes = lockTimes;
+		railEngine.facings [facingFocus].rotationSpeed = rotationSpeed;
+		railEngine.facings [facingFocus].targets = targets;
     }
 }

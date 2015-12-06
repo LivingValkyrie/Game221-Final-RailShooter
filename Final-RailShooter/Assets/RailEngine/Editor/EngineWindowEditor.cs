@@ -15,7 +15,7 @@ public class EngineWindowEditor : EditorWindow {
     List<ScriptMovements> movements;
     List<ScriptEffects> effects;
     List<ScriptFacings> facings;
-    ScriptEngine engine;
+    ScriptRailEngine railEngine;
 
     //local Variables
     int movementFocus = 0;
@@ -33,10 +33,10 @@ public class EngineWindowEditor : EditorWindow {
 
     void OnFocus()
     {
-        engine = GameObject.FindWithTag("Player").GetComponent<ScriptEngine>();
-        movements = engine.movements;
-        effects = engine.effects;
-        facings = engine.facings;
+        railEngine = GameObject.FindWithTag("Player").GetComponent<ScriptRailEngine>();
+        movements = railEngine.movements;
+        effects = railEngine.effects;
+        facings = railEngine.facings;
 
         if (effects.Count <= 0)
         {
@@ -55,7 +55,7 @@ public class EngineWindowEditor : EditorWindow {
         }
 
 //		Debug.Log ("~~~ON FOCUS MOVEMENT COUNT~~~\n" +
-//		           "\tENGINE: " + engine.movements.Count +
+//		           "\tENGINE: " + railEngine.movements.Count +
 //		           "\t\tWINDOW: " + movements.Count);
     }
 
@@ -1243,11 +1243,11 @@ public class EngineWindowEditor : EditorWindow {
 
     void RecordData()
     {
-        engine.movements = movements;
-        engine.effects = effects;
-        engine.facings = facings;
+        railEngine.movements = movements;
+        railEngine.effects = effects;
+        railEngine.facings = facings;
 //		Debug.Log ("~~~LOST FOCUS MOVEMENT COUNT~~~\n" +
-//			"\tENGINE: " + engine.movements.Count +
+//			"\tENGINE: " + railEngine.movements.Count +
 //		           "\t\tWINDOW: " + movements.Count);
     }
 
