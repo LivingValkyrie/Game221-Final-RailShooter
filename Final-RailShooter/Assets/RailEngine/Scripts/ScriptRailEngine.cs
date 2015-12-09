@@ -42,7 +42,7 @@ public class ScriptRailEngine : MonoBehaviour {
 	{
 		foreach(ScriptMovements move in movements)
 		{
-			Debug.Log(move.moveType);
+			
 			switch(move.moveType)
 			{
 				case MovementTypes.STRAIGHT:

@@ -58,7 +58,7 @@ public class ScriptLookAtTarget : MonoBehaviour {
     IEnumerator FreeLook( float facingTime ) {
         float elapsedTime = 0f; // keeps track of elapsed time to continue facing
         float xRotation = 0f;
-        float yRotation = 0f;
+        float yRotation = 180f;
         float lookSensitivity = 3f;
         float curXRotation = transform.rotation.x;
         float curYRotation = transform.rotation.y;

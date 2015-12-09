@@ -12,8 +12,8 @@ using UnityEngine.Networking;
 public class RailPlayer : NetworkBehaviour {
     #region Fields
 
-    ScriptRailEngine railEngine;
-
+    public ScriptRailEngine railEngine;
+    bool started;
     #endregion
 
     void Awake() {
@@ -27,7 +27,14 @@ public class RailPlayer : NetworkBehaviour {
         transform.localRotation = Quaternion.identity;
         railEngine = transform.parent.GetComponent<ScriptRailEngine>();
         railEngine.Awaken();
-        railEngine.Starter();
+        started = false;
+    }
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Space) && !started) {
+            railEngine.Starter();
+            started = true;
+        }
     }
 
     /*
