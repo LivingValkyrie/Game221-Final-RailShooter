@@ -32,7 +32,7 @@ public class Player : MonoBehaviour {
         healthText.text = health.ToString();
 
         if (health <= 0) {
-            
+            Application.LoadLevel("game over");
         }
     }
 

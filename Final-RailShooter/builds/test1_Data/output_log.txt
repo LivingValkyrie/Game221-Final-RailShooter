@@ -16,32 +16,39 @@ Platform assembly: C:\Users\matthew\Projects\GitHub\Final\Final-RailShooter\buil
 Loading C:\Users\matthew\Projects\GitHub\Final\Final-RailShooter\builds\test1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\matthew\Projects\GitHub\Final\Final-RailShooter\builds\test1_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\matthew\Projects\GitHub\Final\Final-RailShooter\builds\test1_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.131 seconds
+- Completed reload, in  0.077 seconds
 desktop: 3200x1800 60Hz; virtual: 3200x1800 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: C:\Users\matthew\Projects\GitHub\Final\Final-RailShooter\builds\test1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\matthew\Projects\GitHub\Final\Final-RailShooter\builds\test1_Data\Managed\System.dll (this message is harmless)
-Curr state = MENU_MAIN
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Transition from Main to Start
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Transition from Start to Host Starting
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.540267 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 43f8 -> priority: 1 
-  Thread -> id: 4bf0 -> priority: 1 
+  Thread -> id: ad08 -> priority: 1 
+  Thread -> id: a3b8 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.874063 ms
+The PlayerPrefab is empty on the NetworkManager. Please setup a PlayerPrefab object.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 431.
-Total: 0.467929 ms (FindLiveObjects: 0.024726 ms CreateObjectMapping: 0.018194 ms MarkObjects: 0.415678 ms  DeleteObjects: 0.008864 ms)
 
-Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:59657}
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1074.
+Total: 0.404014 ms (FindLiveObjects: 0.053650 ms CreateObjectMapping: 0.022393 ms MarkObjects: 0.318173 ms  DeleteObjects: 0.009330 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.832755 ms
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 239.
+Total: 0.652675 ms (FindLiveObjects: 0.031724 ms CreateObjectMapping: 0.020060 ms MarkObjects: 0.517381 ms  DeleteObjects: 0.082575 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.936325 ms
+Multiple NetworkManagers detected in the scene. Only one NetworkManager can exist at a time. The duplicate NetworkManager will not be used.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 265.
+Total: 0.324238 ms (FindLiveObjects: 0.021460 ms CreateObjectMapping: 0.008864 ms MarkObjects: 0.274786 ms  DeleteObjects: 0.008397 ms)
+

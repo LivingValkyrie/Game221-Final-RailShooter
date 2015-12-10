@@ -35,7 +35,7 @@ public class RaycastShoot : MonoBehaviour {
 
             //Determine if our raycast hits anything
             if (Physics.Raycast(ray, out hit, rayDistance)) {
-                Debug.Log(hit.transform.name);
+                //Debug.Log(hit.transform.name);
                 //Determine if our raycast hit an object with our tag
                 if (hit.transform.tag == tagName ) {
                     //pull in enemy script
