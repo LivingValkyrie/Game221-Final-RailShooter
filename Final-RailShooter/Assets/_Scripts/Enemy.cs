@@ -13,8 +13,8 @@ public class Enemy : MonoBehaviour {
     #region Fields
 
     public AIType ai;
-    public int health;
-    public float resistance;
+    public float health;
+    public int pointWorth;
 
     //used for setting enemies attack attributes
     public int attack;
@@ -39,6 +39,10 @@ public class Enemy : MonoBehaviour {
         //passive ai is alwaus waiting
         //scared is always fleeing
         //aggressive is always waiting until in range of player
+        if (health <= 0) {
+            playerOne.score += pointWorth;
+            Destroy(gameObject);
+        }
 
         switch (state) {
             case EnemyState.Active:

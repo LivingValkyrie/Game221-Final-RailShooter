@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+using System.Security.Policy;
 
 /// <summary>
 /// Author: Matt Gipson
@@ -11,10 +13,22 @@ using System.Collections;
 public class Player : MonoBehaviour {
     #region Fields
 
+    public Text healthText, scoreText;
+    public int score, health;
+    [SerializeField]
+    public Weapon weapon;
+
     #endregion
 
-    void Start() { }
+    void Start() {
+        score = health = 0;
+        weapon = new Weapon();
+        weapon.damage = 5;
+    }
 
-    void Update() { }
+    void Update() {
+        scoreText.text = score.ToString();
+        healthText.text = health.ToString();
+    }
 
 }

@@ -12,10 +12,13 @@ public class RaycastShoot : MonoBehaviour {
 
     public float rayDistance;
     public string tagName = "Enemy";
+    public Player myPlayer;
 
     #endregion
 
-    void Start() {}
+    void Start() {
+        myPlayer = GetComponent<Player>();
+    }
 
     void Update() {
         ShootRay();
@@ -38,7 +41,7 @@ public class RaycastShoot : MonoBehaviour {
                     //pull in enemy script
                     //do damage
                     Enemy enemyHit = hit.transform.GetComponent<Enemy>();
-                    //enemyHit.health -= Weapon damage
+                    enemyHit.health -= myPlayer.weapon.damage;
                 } else { //not enemy
                     
                 }
