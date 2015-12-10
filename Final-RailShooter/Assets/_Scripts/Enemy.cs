@@ -77,6 +77,13 @@ public class Enemy : MonoBehaviour {
                 break;
         }
     }
+
+    void OnTriggerEnter(Collider other) {
+        if (other.name == "rail follower 1") {
+            playerOne.health -= attack;
+            Destroy(gameObject);
+        }
+    }
 }
 
 public enum AIType {

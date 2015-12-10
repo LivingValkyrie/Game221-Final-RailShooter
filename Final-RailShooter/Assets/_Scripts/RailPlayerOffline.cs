@@ -24,14 +24,14 @@ public class RailPlayerOffline : MonoBehaviour {
         transform.localRotation = Quaternion.identity;
         railEngine = transform.parent.GetComponent<ScriptRailEngine>();
         railEngine.Awaken();
-        started = false;
+        railEngine.Starter();
+        //started = false;
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space) && !started) {
-            railEngine.Starter();
-            started = true;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space) && !started) {
+        //    started = true;
+        //}
     }
 
     /*

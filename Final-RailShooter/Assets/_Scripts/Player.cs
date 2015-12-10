@@ -21,7 +21,8 @@ public class Player : MonoBehaviour {
     #endregion
 
     void Start() {
-        score = health = 0;
+        score = 0;
+        health = 100;
         weapon = new Weapon();
         weapon.damage = 5;
     }
@@ -29,6 +30,10 @@ public class Player : MonoBehaviour {
     void Update() {
         scoreText.text = score.ToString();
         healthText.text = health.ToString();
+
+        if (health <= 0) {
+            
+        }
     }
 
 }
